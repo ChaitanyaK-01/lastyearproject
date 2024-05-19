@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Booking</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            margin-top: 130px;
+        }
+        body{
+            background-image: url("https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+        }
+
+        input, select {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body >
+    <div class="container">
+        <h2>Book Photography Session</h2>
+        <form action="process_booking.php" method="post">
+            <input type="text" name="firstname" placeholder="First Name" required><br>
+            <input type="text" name="lastname" placeholder="Last Name" required><br>
+            <input type="text" name="venue" placeholder="Venue" required><br>
+            <input type="datetime-local" name="datetime" required><br>
+            <input type="number" name="number" placeholder="Contact Number" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <select name="photography_type" required>
+                <option value="" disabled selected>Select Photography Type</option>
+                <option value="Portrait">Portrait</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Event">Event</option>
+                <!-- Add more options as needed -->
+            </select><br>
+            <input type="submit" value="Book Now">
+        </form>
+    </div>
+    <div>
+        <hr>
+        <center><p> <b>cancellation fee applies to all sessions based on the following conditions:</b></p>
+        <p>Cancellation of the session: A cancellation fee of 30% of the session amount will be charged.</p>
+<p>
+Cancellation less than 3 days but before the session day: A cancellation fee of 50% of the session amount will be charged.</p><p>
+
+Same-day cancellation: A cancellation fee of 80% of the session amount will be charged.</p>
+    </center>
+    </div>
+    <hr>
+    <div>
+        <center><p>for cancellation contact us on phone number:+91 9087654321 ,+91 8907654321 <p>
+            <p>Email us on : ac.photogallarystories@gmail.com </p> </center>
+    </div>
+</body>
+</html>
